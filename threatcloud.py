@@ -43,8 +43,8 @@ parser.add_argument('--workloads', help='Import file for workloads', default='wk
 parser.add_argument('--domains', help='Import file for domains/FQDNS', default='ipl-import.csv')
 args = parser.parse_args()
 
-if 'pulse' not in args:
-    logging.warn("No config file given. Quitting")
+if 'pulse' not in args or 'otxkey' not in args:
+    logging.warn("No pulse or/and OTX key given. Quitting")
     exit()
 
 
