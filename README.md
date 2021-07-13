@@ -14,9 +14,9 @@ Ransomware events like REvil etc.
 
 ## Retrospectively check if a current threat was identified using IP and FQDN IOCs.
 
-![https://github.com/alexgoller/illumio-threatcloud/blob/main/images/screen01.jpg]
-![https://github.com/alexgoller/illumio-threatcloud/blob/main/images/screen02.png]
-![https://github.com/alexgoller/illumio-threatcloud/blob/main/images/screen03.png]
+![Screenshot1](https://github.com/alexgoller/illumio-threatcloud/blob/main/images/screen01.jpg?raw=true)
+![Screenshot2](https://github.com/alexgoller/illumio-threatcloud/blob/main/images/screen02.png?raw=true)
+![Screenshot3](https://github.com/alexgoller/illumio-threatcloud/blob/main/images/screen03.png?raw=true)
 
 ## Proactively block access to IOCs
 
