@@ -10,6 +10,9 @@ Ransomware events like REvil etc.
 * take IPs and FQDNs and create IPlists or unmanaged workloads
 * label workloads accordingly
 
+# Running threatcloud
+
+  test
 
 # Requirements
 
