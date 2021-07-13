@@ -14,6 +14,10 @@ Ransomware events like REvil etc.
 
 ## Retrospectively check if a current threat was identified using IP and FQDN IOCs.
 
+![images/screen01.jpg]
+![images/screen02.png]
+![images/screen03.png]
+
 ## Proactively block access to IOCs
 
 ## Block unauthorized access to IOCs using enforcement boundaries
