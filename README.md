@@ -12,6 +12,9 @@ Ransomware events like REvil etc.
 
 # Use cases
 
+The following screenshots were done with IOC data found in AlienVault OTX for the latest
+Kaseya/REvil ransomware attacks.
+
 ## Retrospectively check if a current threat was identified using IP and FQDN IOCs.
 
 ![Screenshot1](https://github.com/alexgoller/illumio-threatcloud/blob/main/images/screen01.jpg?raw=true)
