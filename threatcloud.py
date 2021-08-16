@@ -64,6 +64,14 @@ def indicators_get(input):
 
     return(indicator_list)
 
+def collapse_items(items):
+    domain = ";".join(items)
+    return collapsed
+
+def resolve_name(name):
+    ip = socket.gethostbyname(name)
+    return ip
+
 def main():
     # OTX_API_KEY = os.environ['OTX_API_KEY']
     otx = OTXv2(args.otxkey)
@@ -98,20 +106,15 @@ def main():
         resolved_ips = []
     
         # usually only one IPL for each pulse_id
-        domain = ";".join(domains)
         include_ips = ''
     
         # if resolve is set, slow everything down
         if args.resolve:
             for name in domains:
-                try:
-                    ip = socket.gethostbyname(name)
-                    resolved_ips.append(ip) 
-                except:
-                    continue
-            include_ips = str(";".join(resolved_ips))
+                resolved_ips.append(resolve_name(name)) 
+            include_ips = collapse_items(resolved_ips)
         
-        ipl_row = ['Threatcloud'+'-'+pulse_id, '', include_ips, '', domain, pulse_id, 'illumio-threatcloud']
+        ipl_row = ['Threatcloud'+'-'+pulse_id, '', include_ips, '', collapse_items(domains), pulse_id, 'illumio-threatcloud']
     
         with open(args.domains, 'w', encoding='UTF8') as f:
             writer = csv.writer(f)
@@ -136,7 +139,7 @@ def main():
                         writer.writerow(umwl_row)
     
                     # if the pulse has no domains skip to next
-                    if len(domains) ==0:
+                    if len(domains) == 0:
                         continue
 
                     resolved_ips = []
